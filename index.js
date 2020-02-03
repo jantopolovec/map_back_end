@@ -27,7 +27,7 @@ app.post('/', function(req, res){
   console.log("________________________________________________________");
   
   axios('https://route.ls.hereapi.com/routing/7.2/calculateroute.json?' + 
-  'apiKey=' + 'xpknnnJ6XEWBPDrHnH3wQi4kOJy4Qe5Q1DZgunY7ZAE&'  + 
+  'apiKey=' + 'hereapikey' + '&'  + 
   'waypoint0=geo!' + lat[0] + ',' + lon[0] + '&' + 
   'waypoint1=geo!' + lat[1] + ',' + lon[1] + '&mode=fastest;pedestrian;traffic:disabled')
 
@@ -37,7 +37,7 @@ app.post('/', function(req, res){
 var a=0;
   
   way.forEach(element => {
-    axios('https://api.openweathermap.org/data/2.5/weather?lat=' + element.position.latitude + '&lon=' + element.position.longitude + '&units=metric&appid=' + '4c8ea3fb8653929d0777d4cd608a7e42')
+    axios('https://api.openweathermap.org/data/2.5/weather?lat=' + element.position.latitude + '&lon=' + element.position.longitude + '&units=metric&appid=' + 'weatherapikey')
     .then((response)=>{
 
       weather.push({lat: element.position.latitude, lon: element.position.longitude, temp: response.data.main.temp});
