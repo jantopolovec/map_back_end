@@ -1,3 +1,3 @@
-# Map backend with nodejs and express
+# Map backend with Nodejs and Express
  
 Frontend: https://github.com/jantopolovec/map_front_end
